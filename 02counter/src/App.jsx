@@ -12,7 +12,7 @@ function App() {
       
       counter = counter + 1; // counter value in HTML page won't get update automatically because that will be only handled by React
       console.log(counter);   
-      setCounter(counter) // so this way, using useState you can update UI that is HTML page
+      setCounter(counter) // so this way, using useState you can update UI that is HTML in page
     }
   }
 
