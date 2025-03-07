@@ -43,7 +43,6 @@ function InputBox({
                                 {money}
                             </option>
                         ))}
-                
                 </select>
             </div>
         </div>

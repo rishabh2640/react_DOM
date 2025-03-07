@@ -33,8 +33,10 @@ function App() {
             backgroundImage: `url('${BackgroundImage}')`,
         }}
     >
-        <div className="w-full">
-            <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-xs bg-white/30">
+        <div className="w-300 p-10 flex flex-wrap flex-row">
+
+            <img className='m-10 mx-auto h-75 rounded-2xl' src="https://images.pexels.com/photos/534229/pexels-photo-534229.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" />
+            <div className="w-full max-w-md mx-auto my-auto border border-gray-60 rounded-lg p-4 backdrop-blur-xs bg-white/30">
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -60,7 +62,7 @@ function App() {
                             swap
                         </button>
                     </div>
-                    <div className="w-full mt-1 mb-4">
+                    <div className="w-full mt-1 mb-3">
                         <InputBox
                             label="To"
                             amount={convertedAmount}
