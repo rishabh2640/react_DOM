@@ -10,7 +10,7 @@ function Github() {
     //         console.log(data);
     //         setData(data)
     //     })
-    // }, [])
+    // }, []) // alternate use of this is on line 24
 
     const data = useLoaderData()
     
