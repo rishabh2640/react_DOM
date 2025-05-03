@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux' // useDispatch is the react function to wire-up with redux toolkit or redux
 import { addTodo } from '../features/todo/todoSlice'
 
+
 function AddTodo() {
+
+    
 
     const [input, setInput] = useState("")
     const dispatch = useDispatch() // useDispatch uses reducers to make a changes into store (configureStore())
