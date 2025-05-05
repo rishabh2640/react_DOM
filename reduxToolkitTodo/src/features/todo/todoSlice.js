@@ -14,7 +14,6 @@ export const todoSlice = createSlice({ // inside createSlice method most of the 
             const todo = {
                 id: nanoid(), // id should be unique by using nanoid() function
                 text: action.payload, // will take a todo text value from action variable, where (action.payload) payload is an object where user is giving input text value or other values as well.
-                isEditable: false
             }
             state.todos.push(todo)
         },
@@ -23,13 +22,13 @@ export const todoSlice = createSlice({ // inside createSlice method most of the 
             state.todos = state.todos.filter((todo) => todo.id !== action.payload) // where action.payload will be id, which was given to the action variable of removeTodo
         },
 
-        updateTodo: (state, action) => {
-            state.todos = state.todos.map((todo) => todo.id === action.payload.id ? { ...todo, text: action.payload.text } : todo)
-        }
+        // updateTodo: (state, action) => {
+        //     state.todos = state.todos.map((todo) => todo.id === action.payload.id ? { ...todo, text: action.payload.text } : todo)
+        // }
     }
 })
 
-export const { addTodo, removeTodo, updateTodo } = todoSlice.actions
+export const { addTodo, removeTodo } = todoSlice.actions
 
 export default todoSlice.reducer
 
