@@ -1,6 +1,7 @@
 {
     "tailwindcss-intellisense.trace.server": "off",
     "cSpell.words": [
+        "appwrite",
         "palegreen"
     ],
     "tailwindCSS.emmetCompletions": true,
