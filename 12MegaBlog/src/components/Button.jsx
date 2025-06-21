@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 function Button({
     children,
@@ -9,7 +9,7 @@ function Button({
     ...props
 }) {
     return (
-        <button className={`px-4 py-2 rounded-lg ${className} ${textColor} ${bgColor}`}  {...props}
+        <button className={`px-4 py-2 rounded-lg ${className} ${textColor} ${bgColor}`} {...props}
         >{children}</button>
     )
 }

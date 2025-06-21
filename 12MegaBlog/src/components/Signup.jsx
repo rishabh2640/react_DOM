@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import authService from '../appwrite/auth'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/authSlice'
 import { Button, Input, Logo } from './index'
 import { useDispatch } from 'react-redux'
@@ -47,7 +47,7 @@ function Signup() {
                 </p>
                 {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
 
-                <Form onSubmit={handleSubmit(create)}>
+                <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
                         <Input
                             label="Full Name: "
@@ -77,11 +77,11 @@ function Signup() {
                             })}
                         />
                         <Button
-                            type='submi'
+                            type='submit'
                             className='w-full'
                         >Create an Account</Button>
                     </div>
-                </Form>
+                </form>
             </div>
         </div>
     )

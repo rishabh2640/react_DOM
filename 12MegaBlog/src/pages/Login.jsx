@@ -7,7 +7,6 @@ function Login() {
             <LoginComponent />
         </div>
     )
-
 }
 
 export default Login
