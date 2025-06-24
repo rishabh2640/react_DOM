@@ -1,7 +1,6 @@
 import conf from '../conf/conf.js'
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
-
 export class Service {
     client = new Client()
     databases;
@@ -67,10 +66,11 @@ export class Service {
             )
         } catch (error) {
             console.log("Appwrite service :: getPost :: error", error);
+            return false
         }
     }
 
-    async listPosts(queries = [Query.equal("status", "active")]) {
+    async getPosts(queries = [Query.equal("status", "active")]) {
         try {
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseId,
@@ -78,7 +78,7 @@ export class Service {
                 queries
             )
         } catch (error) {
-            console.log("Appwrite service :: listPosts :: error", error);
+            console.log("Appwrite service :: getPosts :: error", error);
             return false
         }
     }
@@ -94,6 +94,7 @@ export class Service {
             )
         } catch (error) {
             console.log("Appwrite service :: uploadFile :: error", error);
+            return false
         }
     }
 
@@ -111,7 +112,7 @@ export class Service {
     }
 
     getFilePreview(fileId) {
-        return this.bucket.getFilePreview(
+        return this.bucket.getFileView(
             conf.appwriteBucketId,
             fileId
         )
