@@ -10,7 +10,7 @@ import { AuthLayout, Login } from './components/index.js'
 
 
 import AddPost from "./pages/AddPost";
-import Signup from './pages/Signup';
+import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
 import Post from "./pages/Post";
 import AllPost from './pages/AllPost'
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication={false}>
             <Login />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/signup",
@@ -70,9 +70,9 @@ const router = createBrowserRouter([
       {
         path: "/post/:slug",
         element: <Post />,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

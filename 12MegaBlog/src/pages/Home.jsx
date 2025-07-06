@@ -6,7 +6,7 @@ function Home() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        appwriteService.getPost().then((posts) => {
+        appwriteService.getPosts().then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
             }
@@ -28,7 +28,6 @@ function Home() {
             </div>
         )
     }
-
     return (
         <div className='w-full py-8'>
             <Container>
